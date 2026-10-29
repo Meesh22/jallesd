@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>اقتباسات الأعضاء | نادي جليس القرائي - القصيم</title>
+
+  <meta name="description" content="اقتباسات وتدوينات أعضاء نادي جليس القرائي من لقاءاتهم في منطقة القصيم: لقطات قرائية ومقتطفات من الكتب وعبارات لامستهم.">
+  <meta name="theme-color" content="#1E3A2B">
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="اقتباسات الأعضاء | نادي جليس القرائي">
+  <meta property="og:description" content="لقطات قرائية وتدوينات أعضاء نادي جليس القرائي من قلب اللقاءات في منطقة القصيم.">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ar_SA">
+  <meta property="og:site_name" content="نادي جليس القرائي">
+  <meta property="og:url" content="https://jalees1.vercel.app/quotes.html">
+  <meta property="og:image" content="https://jalees1.vercel.app/assets/images/og-link-hq.jpg">
+  <meta property="og:image:type" content="image/jpeg">
+  <meta property="og:image:width" content="1600">
+  <meta property="og:image:height" content="845">
+  <meta property="og:image:alt" content="شعار نادي جليس القرائي - أصدقاء القراءة">
+
+  <!-- Twitter / X -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="اقتباسات الأعضاء | نادي جليس القرائي">
+  <meta name="twitter:description" content="لقطات قرائية وتدوينات أعضاء نادي جليس القرائي من قلب اللقاءات في منطقة القصيم.">
+  <meta name="twitter:image" content="https://jalees1.vercel.app/assets/images/og-link-hq.jpg">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/images/logo-icon.png">
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+Arabic:wght@300;400;500;600;700;800&family=Tajawal:wght@400;500;700;800&display=swap" rel="stylesheet">
+
+  <!-- التنسيق الرئيسي المشترك -->
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    /* ===== تنسيقات خاصة بصفحة الاقتباسات ===== */
+    body {
+      font-family: "IBM Plex Sans Arabic", sans-serif;
+      background: #F4EFE6;
+      margin: 0;
+      min-height: 100vh;
+    }
+
+    .proof-page-header {
+      background: linear-gradient(150deg, #14281D 0%, #1E3A2B 60%, #24503A 100%);
+      color: #FAF6EE;
+      padding: 26px 0 34px;
+    }
+
+    .back-nav-bar {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 26px;
+    }
+
+    .btn-back-home {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #FAF6EE;
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.25);
+      padding: 9px 18px;
+      border-radius: var(--radius-full, 40px);
+      font-size: 14px;
+      font-weight: 600;
+      text-decoration: none;
+      transition: background 0.2s ease;
+    }
+    .btn-back-home:hover { background: rgba(255,255,255,0.16); }
+
+    .proof-header-logo { height: 46px; width: auto; display: block; }
+
+    .proof-page-title { font-size: 30px; font-weight: 800; margin: 10px 0 8px; }
+    .proof-page-lead { color: #D8E2DB; font-size: 15.5px; max-width: 640px; line-height: 1.8; margin: 0; }
+
+    /* شبكة الاقتباسات */
+    .quotes-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+      gap: 24px;
+    }
+
+    .quote-card {
+      background: #FFFFFF;
+      border: 1px solid #E5DCC9;
+      border-radius: 16px;
+      padding: 26px 26px 22px;
+      box-shadow: 0 8px 24px rgba(20, 40, 29, 0.07);
+      display: flex;
+      flex-direction: column;
+      gap: 14px;
+      position: relative;
+      transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .quote-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 14px 32px rgba(20, 40, 29, 0.12);
+      border-color: #C59B63;
+    }
+
+    .quote-mark {
+      position: absolute;
+      top: 16px;
+      left: 20px;
+      font-size: 42px;
+      line-height: 1;
+      color: #C59B63;
+      opacity: 0.35;
+      font-family: Georgia, serif;
+    }
+
+    .quote-text {
+      font-size: 16px;
+      line-height: 2;
+      color: #2C3B32;
+      margin: 0;
+      font-family: "Tajawal", "IBM Plex Sans Arabic", sans-serif;
+      font-weight: 500;
+    }
+
+    .quote-meta {
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      margin-top: auto;
+      padding-top: 14px;
+      border-top: 1px dashed #E7DFCE;
+      flex-wrap: wrap;
+    }
+
+    .quote-author {
+      font-size: 14px;
+      font-weight: 700;
+      color: #1E3A2B;
+    }
+
+    .quote-book {
+      font-size: 12.5px;
+      font-weight: 600;
+      color: #8C6B3F;
+      background: rgba(197, 155, 99, 0.14);
+      border: 1px solid rgba(197, 155, 99, 0.35);
+      padding: 3px 12px;
+      border-radius: 30px;
+    }
+
+    .quote-ordinal {
+      font-size: 12px;
+      font-weight: 700;
+      color: #98A69D;
+    }
+
+    /* حالة عدم توفر اقتباسات منشورة بعد */
+    .quotes-empty {
+      background: #FFFFFF;
+      border: 1px dashed #D5CBB4;
+      border-radius: 18px;
+      padding: 56px 24px 48px;
+      text-align: center;
+    }
+    .quotes-empty-icon { font-size: 44px; margin-bottom: 12px; }
+    .quotes-empty-title { font-size: 21px; font-weight: 800; color: #1E3A2B; margin: 0 0 8px; }
+    .quotes-empty-desc { color: #6E7B72; font-size: 14.5px; max-width: 520px; margin: 0 auto; line-height: 1.9; }
+  </style>
+</head>
+<body>
+
+  <!-- شريط الترويسة لصفحة الاقتباسات -->
+  <header class="proof-page-header">
+    <div class="container">
+
+      <div class="back-nav-bar">
+        <a href="index.html" class="btn-back-home">
+          <span>← العودة إلى الصفحة الرئيسية</span>
+        </a>
+        <a href="index.html" class="site-logo">
+          <img src="assets/images/logo-on-dark.png" alt="نادي جليس القرائي" class="proof-header-logo">
+        </a>
+      </div>
+
+      <span class="section-badge badge-light">💬 من صوت الأعضاء</span>
+      <h1 class="proof-page-title">اقتباسات الأعضاء</h1>
+      <p class="proof-page-lead">
+        هنا نوثّق أجمل ما خطه أعضاء نادي جليس القرائي: لقطات قرائية ومقتطفات من الكتب وعبارات لامستهم من اللقاءات — لتكون شاهدًا مكتوبًا على إثمار القراءة.
+      </p>
+
+    </div>
+  </header>
+
+  <main class="section" style="padding-top: 56px;">
+    <div class="container">
+
+      <!-- شبكة الاقتباسات (تُملأ من مصفوفة memberQuotes في أسفل الصفحة) -->
+      <div class="quotes-grid" id="quotes-grid"></div>
+
+      <!-- حالة عدم توفر اقتباسات منشورة بعد -->
+      <div class="quotes-empty" id="quotes-empty">
+        <div class="quotes-empty-icon">💬</div>
+        <h3 class="quotes-empty-title">نجمع اقتباسات الأعضاء ونوثقها</h3>
+        <p class="quotes-empty-desc">
+          نعمل على جمع أجمل الاقتباسات والتدوينات من أعضاء النادي من لقاءاتنا، وسيتم نشرها هنا فور جاهزيتها، تابعونا.
+        </p>
+      </div>
+
+      <!-- زر العودة النهائي -->
+      <div class="text-center" style="margin-top: 46px;">
+        <a href="index.html" class="btn btn-primary btn-lg">
+          <span>← العودة إلى الصفحة الرئيسية لنادي جليس</span>
+        </a>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- التذييل الرسمي -->
+  <footer class="site-footer" style="margin-top: 70px;">
+    <div class="container text-center" style="padding-bottom: 30px;">
+      <a href="index.html" class="site-logo" style="display:inline-block; margin-bottom:16px;">
+        <img src="assets/images/logo-on-dark.png" alt="نادي جليس" class="proof-header-logo" style="height:auto;">
+      </a>
+      <p style="color:#B2BEB5; font-size:14.5px; max-width:600px; margin:0 auto 16px;">
+        نادي جليس القرائي • بريدة • جمعية التنمية الأهلية بالمريدسية • منطقة القصيم
+      </p>
+      <p style="color:#8C9990; font-size:13px;">
+        جميع الحقوق محفوظة © نادي جليس القرائي
+      </p>
+    </div>
+  </footer>
+
+  <!-- JavaScript الخاص بصفحة الاقتباسات -->
+  <script>
+    /*
+      مصفوفة اقتباسات الأعضاء
+      لإضافة اقتباس جديد: أضف عنصرًا بهذا الشكل في المصفوفة وسيظهر فورًا:
+      { text: "نص الاقتباس", author: "اسم العضو", book: "اسم الكتاب (اختياري)", ordinal: "اقتباس ٣" }
+    */
+    const memberQuotes = [];
+
+    (function renderQuotes() {
+      const grid = document.getElementById('quotes-grid');
+      const empty = document.getElementById('quotes-empty');
+      if (!grid) return;
+
+      if (memberQuotes.length === 0) {
+        grid.style.display = 'none';
+        if (empty) empty.style.display = 'block';
+        return;
+      }
+      if (empty) empty.style.display = 'none';
+
+      grid.innerHTML = memberQuotes.map(q => `
+        <article class="quote-card">
+          <span class="quote-mark">&rdquo;</span>
+          <p class="quote-text">${q.text}</p>
+          <div class="quote-meta">
+            <span class="quote-author">✍️ ${q.author}</span>
+            ${q.book ? `<span class="quote-book">📘 ${q.book}</span>` : ''}
+            ${q.ordinal ? `<span class="quote-ordinal">• ${q.ordinal}</span>` : ''}
+          </div>
+        </article>
+      `).join('');
+    })();
+  </script>
+</body>
+</html>
